@@ -18,7 +18,7 @@ const UpdateFarm = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:7000/getfarm/${id}`)
+    axios.get(`https://agritech-s1jy.onrender.com/getfarm/${id}`)
       .then((response) => {
         const formattedData = {
           ...response.data,
@@ -46,7 +46,7 @@ const UpdateFarm = () => {
     setError(null);
 
     try {
-      await axios.put(`http://localhost:7000/editfarm/${id}`, farmData);
+      await axios.put(`https://agritech-s1jy.onrender.com/editfarm/${id}`, farmData);
       alert('Farm updated successfully');
       navigate('/getfarms');
     } catch (error) {

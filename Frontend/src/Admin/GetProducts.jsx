@@ -9,14 +9,14 @@ const GetProducts = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const response = await axios.get('http://localhost:7000/products');
+      const response = await axios.get('https://agritech-s1jy.onrender.com/products');
       setProducts(response.data);
     };
     fetchProducts();
   }, []);
 
   const deleteProduct =(id)=>{
-    axios.delete(`http://localhost:7000/deleteproduct/${id}`)
+    axios.delete(`https://agritech-s1jy.onrender.com/deleteproduct/${id}`)
     .then(()=>{
       alert("Deleted Sucessfully")
       window.location.assign('/getproducts')

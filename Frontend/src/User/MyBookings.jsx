@@ -21,7 +21,7 @@ function Mybookings() {
   const fetchBookings = () => {
     const user = JSON.parse(localStorage.getItem('user'));
     if (user) {
-      axios.get(`http://localhost:7000/getbookings/${user.id}`)
+      axios.get(`https://agritech-s1jy.onrender.com/getbookings/${user.id}`)
         .then((response) => {
           setBookings(response.data);
         })
@@ -35,7 +35,7 @@ function Mybookings() {
     const user = JSON.parse(localStorage.getItem('user'));
     if (!user) return;
 
-    axios.post('http://localhost:7000/orderproduct', {
+    axios.post('https://agritech-s1jy.onrender.com/orderproduct', {
       ...newBooking,
       userId: user.id,
       userName: user.name,

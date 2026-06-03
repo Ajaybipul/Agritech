@@ -9,7 +9,7 @@ const ViewCropData = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    axios.get(`http://localhost:7000/cropsdata/${name}`)
+    axios.get(`https://agritech-s1jy.onrender.com/cropsdata/${name}`)
       .then(res => {
         setCrop(res.data);
         setIsLoading(false);

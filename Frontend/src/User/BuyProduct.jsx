@@ -16,7 +16,7 @@ function BuyProduct() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:7000/products/${id}`)
+    axios.get(`https://agritech-s1jy.onrender.com/products/${id}`)
       .then((resp) => {
         setItem(resp.data);
         console.log(resp.data);
@@ -57,7 +57,7 @@ function BuyProduct() {
 
       console.log("Form Data to be sent:", updatedFormData);
 
-      await axios.post('http://localhost:7000/orderproduct', updatedFormData);
+      await axios.post('https://agritech-s1jy.onrender.com/orderproduct', updatedFormData);
       alert('Ordered successfully');
       navigate('/mybookings');
     } catch (error) {

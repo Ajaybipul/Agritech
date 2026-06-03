@@ -49,7 +49,7 @@ const AddProduct = ({ fetchProducts }) => {
     }
 
     try {
-      await axios.post('http://localhost:7000/products', productData);
+      await axios.post('https://agritech-s1jy.onrender.com/products', productData);
       
       // Show success and reset form
       alert('Product added successfully!');

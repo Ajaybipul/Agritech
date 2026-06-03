@@ -15,7 +15,7 @@ const Users = () => {
   };
 
   useEffect(() => {
-    axios.get('http://localhost:7000/users')
+    axios.get('https://agritech-s1jy.onrender.com/users')
       .then((response) => {
         setUsers(response.data);
       })
@@ -25,7 +25,7 @@ const Users = () => {
   }, []);
 
   const deleteData = (userId) => {
-    axios.delete(`http://localhost:7000/userdelete/${userId}`)
+    axios.delete(`https://agritech-s1jy.onrender.com/userdelete/${userId}`)
       .then(() => {
         alert('User deleted successfully.');
         setUsers(users.filter(user => user._id !== userId));
@@ -36,7 +36,7 @@ const Users = () => {
   };
 
   const fetchUserDetails = (userId) => {
-    axios.get(`http://localhost:7000/getfarms/${userId}`)
+    axios.get(`https://agritech-s1jy.onrender.com/getfarms/${userId}`)
       .then((response) => {
         setItems(response.data);
         toggleDetails();
@@ -45,7 +45,7 @@ const Users = () => {
         console.log('Error fetching farms data');
       });
 
-    axios.get(`http://localhost:7000/getcrops/${userId}`)
+    axios.get(`https://agritech-s1jy.onrender.com/getcrops/${userId}`)
       .then((response) => {
         setCrops(response.data);
         toggleDetails();

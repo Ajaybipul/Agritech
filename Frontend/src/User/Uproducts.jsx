@@ -8,7 +8,7 @@ const UProducts = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const response = await axios.get('http://localhost:7000/products');
+      const response = await axios.get('https://agritech-s1jy.onrender.com/products');
       setProducts(response.data);
     };
     fetchProducts();

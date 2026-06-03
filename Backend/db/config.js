@@ -1,3 +1,3 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://127.0.0.1:27017/Agri-Tech')
+mongoose.connect('mongodb+srv://ajayyadavbipul2003_db_user:Ajay1224@cluster0.djgfyps.mongodb.net/?appName=Cluster0')

@@ -9,7 +9,7 @@ const Uhome = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:7000/cropsdata')
+    axios.get('https://agritech-s1jy.onrender.com/cropsdata')
       .then(res => {
         setCrops(res.data);
         setIsLoading(false);

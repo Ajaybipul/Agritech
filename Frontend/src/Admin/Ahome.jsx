@@ -14,9 +14,9 @@ function Ahome() {
     const fetchData = async () => {
       try {
         const [usersRes, productsRes, farmsRes] = await Promise.all([
-          axios.get('http://localhost:7000/users'),
-          axios.get('http://localhost:7000/products'),
-          axios.get('http://localhost:7000/farms')
+          axios.get('https://agritech-s1jy.onrender.com/users'),
+          axios.get('https://agritech-s1jy.onrender.com/products'),
+          axios.get('https://agritech-s1jy.onrender.com/farms')
         ]);
         
         setUsers(usersRes.data);

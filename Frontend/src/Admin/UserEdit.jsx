@@ -19,7 +19,7 @@ const UserEdit = ({ match }) => {
         // Fetch user data when the component mounts
         const fetchUser = async () => {
             try {
-                const response = await axios.get(`http://localhost:7000/users/${id}`);
+                const response = await axios.get(`https://agritech-s1jy.onrender.com/users/${id}`);
                 setUser(response.data);
             } catch (error) {
                 console.error(error);
@@ -36,7 +36,7 @@ const UserEdit = ({ match }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:7000/useredit/${id}`, user);
+            await axios.put(`https://agritech-s1jy.onrender.com/useredit/${id}`, user);
             alert('User updated successfully');
             navigate('/users');
             console.log("Updated successfully");

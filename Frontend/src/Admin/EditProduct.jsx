@@ -20,7 +20,7 @@ const EditProduct = ({ fetchProducts }) => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:7000/products/${id}`);
+        const response = await axios.get(`https://agritech-s1jy.onrender.com/products/${id}`);
         setProductData(response.data);
       } catch (error) {
         setError('There was an error fetching the product data!');
@@ -51,7 +51,7 @@ const EditProduct = ({ fetchProducts }) => {
     }
 
     try {
-      await axios.put(`http://localhost:7000/products/${id}`, productData);
+      await axios.put(`https://agritech-s1jy.onrender.com/products/${id}`, productData);
       alert('Product updated successfully');
       navigate('/getproducts');
       fetchProducts(); // Fetch the updated list of products

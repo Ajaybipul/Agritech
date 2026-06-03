@@ -13,7 +13,7 @@ const GetCrops = () => {
     const user = JSON.parse(localStorage.getItem('user'));
 
     if (user) {
-      axios.get(`http://localhost:7000/getcrops/${user.id}`)
+      axios.get(`https://agritech-s1jy.onrender.com/getcrops/${user.id}`)
         .then((response) => {
           const taskData = response.data;
           setCrops(taskData);
@@ -41,7 +41,7 @@ const GetCrops = () => {
 
   const handleDeleteCrop = async (cropId) => {
     try {
-      await axios.delete(`http://localhost:7000/deletecrop/${cropId}`);
+      await axios.delete(`https://agritech-s1jy.onrender.com/deletecrop/${cropId}`);
       setCrops(crops.filter(crop => crop._id !== cropId));
       alert('Crop deleted successfully');
     } catch (error) {

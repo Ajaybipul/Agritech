@@ -13,7 +13,7 @@ const GetFarms = () => {
     const user = JSON.parse(localStorage.getItem('user'));
 
     if (user) {
-      axios.get(`http://localhost:7000/getfarms/${user.id}`)
+      axios.get(`https://agritech-s1jy.onrender.com/getfarms/${user.id}`)
         .then((response) => {
           const taskData = response.data;
           setFarms(taskData);
@@ -41,7 +41,7 @@ const GetFarms = () => {
 
   const handleDeleteFarm = async (farmId) => {
     try {
-      await axios.delete(`http://localhost:7000/deletefarm/${farmId}`);
+      await axios.delete(`https://agritech-s1jy.onrender.com/deletefarm/${farmId}`);
       setFarms(farms.filter(farm => farm._id !== farmId));
       alert('Farm deleted successfully');
     } catch (error) {

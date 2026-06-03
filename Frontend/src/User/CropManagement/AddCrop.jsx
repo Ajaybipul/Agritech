@@ -50,7 +50,7 @@ const AddCrop = ({ fetchCrops }) => {
     }
 
     try {
-      await axios.post('http://localhost:7000/addcrop', {
+      await axios.post('https://agritech-s1jy.onrender.com/addcrop', {
         ...cropData,
         userId: user.id,
         userName: user.name

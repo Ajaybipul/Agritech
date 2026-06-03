@@ -16,7 +16,7 @@ const Ulogin = () => {
     e.preventDefault();
     let payload = { email, password };
     axios
-      .post("http://localhost:7000/ulogin", payload)
+      .post("https://agritech-s1jy.onrender.com/ulogin", payload)
       .then((res) => {
         console.log("login: " + res.data.Status);
         if (res.data.Status === "Success") {

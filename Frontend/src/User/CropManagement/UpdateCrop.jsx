@@ -19,7 +19,7 @@ const UpdateCrop = ({ cropId, fetchCrops }) => {
   useEffect(() => {
     const fetchCrop = async () => {
       try {
-        const response = await axios.get(`http://localhost:7000/getcrop/${id}`);
+        const response = await axios.get(`https://agritech-s1jy.onrender.com/getcrop/${id}`);
         const crop = response.data;
         // Format the dates
         crop.plantedDate = crop.plantedDate.split('T')[0];
@@ -47,7 +47,7 @@ const UpdateCrop = ({ cropId, fetchCrops }) => {
     setError(null);
 
     try {
-      await axios.put(`http://localhost:7000/editcrop/${id}`, cropData);
+      await axios.put(`https://agritech-s1jy.onrender.com/editcrop/${id}`, cropData);
       alert('Crop updated successfully');
       navigate('/getcrops')
       fetchCrops();
