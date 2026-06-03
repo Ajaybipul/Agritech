@@ -10,7 +10,7 @@ const app = express();
 // Middleware setup
 app.use(express.json());
 app.use(cors({
-  origin: ["http://localhost:5173"],
+  origin: ["https://glowing-semolina-26eece.netlify.app"],
   methods: ["POST", "GET", "DELETE", "PUT"],
   credentials: true
 }));
